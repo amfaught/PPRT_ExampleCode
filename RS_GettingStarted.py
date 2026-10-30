@@ -15,10 +15,12 @@ print('Planning Image: {exam_name}\n'.format(exam_name=beam_set.GetPlanningExami
 for beam in beam_set.Beams:
     print('{beam_name}: {mu_in_beam} MU\n'.format(beam_name=beam.Name, mu_in_beam=beam.BeamMU))
 
-# Write information to file
-with open("output_file.txt", "w", encoding="utf-8") as file:
-    file.write('Patient Name: {name_variable}\n'.format(name_variable=patient.Name))
-    file.write('Patient MRN: {mrn_variable}\n'.format(mrn_variable=patient.PatientID))
-    file.write('Planning Image: {exam_name}\n'.format(exam_name=beam_set.GetPlanningExamination().Name))
-    for beam in beam_set.Beams:
-        file.write('{beam_name}: {mu_in_beam} MU\n'.format(beam_name=beam.Name, mu_in_beam=beam.BeamMU))
+# Write information to file - Update filepath and name, then uncomment to run
+#output_dir = "<your destination here>"
+#output_filename = "output_file.txt"
+#with open(output_filename, "w", encoding="utf-8") as file:
+#    file.write('Patient Name: {name_variable}\n'.format(name_variable=patient.Name))
+#    file.write('Patient MRN: {mrn_variable}\n'.format(mrn_variable=patient.PatientID))
+#    file.write('Planning Image: {exam_name}\n'.format(exam_name=beam_set.GetPlanningExamination().Name))
+#    for beam in beam_set.Beams:
+#        file.write('{beam_name}: {mu_in_beam} MU\n'.format(beam_name=beam.Name, mu_in_beam=beam.BeamMU))
