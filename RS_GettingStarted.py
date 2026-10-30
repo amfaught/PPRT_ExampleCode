@@ -17,8 +17,9 @@ for beam in beam_set.Beams:
 
 # Write information to file - Update filepath and name, then uncomment to run
 #output_dir = "<your destination here>"
-#output_filename = "output_file.txt"
-#with open(output_filename, "w", encoding="utf-8") as file:
+#filename = "output_file.txt"
+#full_filename = os.path.join(output_dir, filename)
+#with open(full_filename, "w", encoding="utf-8") as file:
 #    file.write('Patient Name: {name_variable}\n'.format(name_variable=patient.Name))
 #    file.write('Patient MRN: {mrn_variable}\n'.format(mrn_variable=patient.PatientID))
 #    file.write('Planning Image: {exam_name}\n'.format(exam_name=beam_set.GetPlanningExamination().Name))
